@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfWheelPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:WpfWheelPanel.Controls"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000">
+    <Grid Background="LightGray">
+        <Grid.ContextMenu>
+            <controls:WheelContextMenu controls:WheelPanel.ItemSize="30"
+                                controls:WheelPanel.Spacing="15"
+                                controls:WheelPanel.MinInnerRadius="10">
+                <MenuItem Header="I" />
+                <MenuItem Header="II" />
+                <MenuItem Header="...">
+                    <MenuItem Header="I" />
+                    <MenuItem Header="II" />
+                    <MenuItem Header="...">
+                        <MenuItem Header="I" />
+                        <MenuItem Header="II" />
+                        <MenuItem Header="III" />
+                        <MenuItem Header="IV" />
+                    </MenuItem>
+                    <MenuItem Header="III" />
+                </MenuItem>
+                <MenuItem Header="III" />
+                <MenuItem Header="IV" />
+                <MenuItem Header="V" />
+                <MenuItem Header="...">
+                    <MenuItem Header="I" />
+                    <MenuItem Header="...">
+                        <MenuItem Header="I" />
+                        <MenuItem Header="II" />
+                        <MenuItem Header="IV" />
+                    </MenuItem>
+                    <MenuItem Header="II" />
+                    <MenuItem Header="III" />
+                </MenuItem>
+                <MenuItem Header="VI" />
+                <MenuItem Header="VII" />
+            </controls:WheelContextMenu>
+        </Grid.ContextMenu>
+    </Grid>
+</Window>
